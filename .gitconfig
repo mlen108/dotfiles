@@ -1,0 +1,44 @@
+[core]
+  editor = vim
+  excludesfile = ~/.gitignore
+  whitespace = blank-at-eol,cr-at-eol,tabwidth=4,tab-in-indent,space-before-tab
+
+[user]
+  name = "Maciek Lenc"
+  email = matt.lenc@gmail.com
+
+[alias]
+  a = add
+  aa = !git add . && git status
+  ap = add -p
+  b = branch
+  c = commit -v
+  co = checkout
+  cob = checkout -b
+  cr = diff -p --no-prefix -U1000
+  d = diff
+  dc = diff --cached
+  df = diff --function-context
+  in = !git fetch && git log ..origin/master
+  ls = ls-files
+  pl = pull
+  pp = !git pull && git push
+  ps = push
+  s = status
+  ss = status -s
+  who = shortlog -n -s --no-merges
+
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+  ui = true
+
+[status]
+  relativePaths = true
+
+[push]
+  default = current
+
+[merge]
+  conflictstyle = diff3
