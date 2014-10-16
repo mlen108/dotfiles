@@ -1,3 +1,6 @@
+alias git=gub
+alias g=git
+
 alias pma='python manage.py'
 alias pmr='python manage.py runserver'
 alias pmrp='python manage.py runserver_plus'
