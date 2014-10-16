@@ -1,10 +1,9 @@
-alias pma='python manage.py'
 alias pmr='python manage.py runserver'
 alias pmrp='python manage.py runserver_plus'
 
 alias pmm='python manage.py migrate'
-alias pms='python manage.py schemamigration'
-alias pmd='python manage.py datamigration'
+alias pmsm='python manage.py schemamigration'
+alias pmdm='python manage.py datamigration'
 alias pmmm='python manage.py makemigrations'
 alias pmsp='python manage.py shell_plus'
 
