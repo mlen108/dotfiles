@@ -1,4 +1,4 @@
-alias git=gub
+alias git=hub
 alias g=git
 
 alias pma='python manage.py'
