@@ -5,7 +5,7 @@
 
 [user]
   name = "Maciek Lenc"
-  email = matt.lenc@gmail.com
+  email = maciej.lenc@sage.com
 
 [alias]
   a = add
@@ -38,7 +38,7 @@
   relativePaths = true
 
 [push]
-  default = current
+  default = simple
 
 [merge]
   conflictstyle = diff3
