@@ -66,14 +66,14 @@ FG_ORANGE='\[\033[0;214m\]'
 NO_COLOUR='\[\033[0m\]'
 
 PS1_TIME='\[\033[48;5;0m\033[38;5;250m\]'
-PS1_PATH='\[\033[0;38;5;12m\]'
+PS1_PATH='\[\033[0;38;5;160m\]'
 PS1_MARKER="$FG_ORANGE"
-GIT_LABEL='\[\033[48;5;234m\033[38;5;214m\]'
+GIT_LABEL='\[\033[48;5;234m\033[38;5;26m\]'
 GIT_JOIN='\[\033[48;5;179m\033[38;5;30m\]'
 GIT_BRANCH='\[\033[48;5;245m\033[38;5;234m\]'
 GIT_CLEAN='\[\033[48;5;22m\]'
-GIT_DIRTY='\[\033[48;5;88m\]'
-GIT_PATH='\[\033[48;5;0m\033[38;5;214m\]'
+GIT_DIRTY='\[\033[48;5;160m\]'
+GIT_PATH='\[\033[48;5;0m\033[38;5;152m\]'
 SVN_LABEL='\[\033[48;5;97m\033[38;5;17m\]'
 SVN_PATH='\[\033[0;38;5;183m\]'
 SVN_SPACER='\[\033[48;5;250m\]'
@@ -83,11 +83,11 @@ function check_user {
   if [[ $EUID -ne 0 ]]; then
     PS1_TIME="$NO_COLOUR\033[38;5;250m\] \$(date +%H:%M) "
     PS1_PATH="\[\033[0;38;5;222m\]"
-    PS1_MARKER="$FG_YELLOW\$$NO_COLOUR "
+    PS1_MARKER="$FG_WHITE\$$NO_COLOUR "
   else
     PS1_TIME="\[\033[48;5;160m\033[38;5;255m\] \$(date +%H:%M) \[\033[48;5;88m\033[38;5;17m\] \$(id -nu) "
     PS1_PATH="\[\033[0;38;5;165m\]"
-    PS1_MARKER="$FG_YELLOW#$NO_COLOUR "
+    PS1_MARKER="$FG_RED#$NO_COLOUR "
   fi
 }
 
