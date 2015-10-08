@@ -5,8 +5,9 @@
 
 [user]
   name = "Maciek Lenc"
-  email = maciej.lenc@sage.com
+  email = "maciej.lenc@sage.com"
 
+[alias]
 [alias]
   a = add
   aa = !git add . && git status
@@ -28,17 +29,20 @@
   ss = status -s
   who = shortlog -n -s --no-merges
 
-[color]
-  branch = auto
-  diff = auto
-  status = auto
-  ui = true
-
-[status]
-  relativePaths = true
+[pull]
+	default = current
 
 [push]
-  default = simple
+  default = current
+
+[difftool]
+	prompt = false
 
 [merge]
   conflictstyle = diff3
+
+[mergetool]
+	prompt = false
+
+[core]
+	excludesfile = /Users/maciej.lenc/.gitignore
