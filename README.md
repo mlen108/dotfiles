@@ -1,33 +1,34 @@
 Dotfiles
 ========
 
-dotfiles inspired by [Adam Georgeson's dotfiles](https://github.com/adamgeorgeson/dotfiles)
-
 Simple dotfiles using bash shell, vim as editor, few awesome vim plugins etc.
 
-Currently in use on OSX 10.10.5.
+Currently in use on OSX 10.10.5 (work env), and Debian 8.2 ("other" work env). See the `X` branch for config related to Xorg.
 
 Usage
 ========
 
 ## Clone into ~/dotfiles/
 
-* `$ cd ~/`
-* `$ git clone git@github.com:mlen108/dotfiles.git`
+* `cd ~/`
+* `git clone git@github.com:mlen108/dotfiles.git`
 
 ## Then add symlinks in your ~/ directory
 
-* `$ cd ~/`
-* `$ ln -nfs ~/dotfiles/vim/ .vim`
-* `$ ln -nfs ~/dotfiles/vimrc .vimrc`
-* `$ ln -nfs ~/dotfiles/bash_profile .bash_profile`
-* `$ ln -nfs ~/dotfiles/bash_aliases .bash_aliases`
-* `$ ln -nfs ~/dotfiles/gitconfig .gitconfig`
+* `cd ~/`
+* `ln -nfs ~/dotfiles/vim/ .vim`
+* `ln -nfs ~/dotfiles/vimrc .vimrc`
+* `ln -nfs ~/dotfiles/bash_profile .bash_profile`
+* `ln -nfs ~/dotfiles/bash_aliases .bash_aliases`
+* `ln -nfs ~/dotfiles/gitconfig .gitconfig`
+
+If proper Unix-like system:
+* `ln -nfs ~/dotfiles/Xdefaults .Xdefaults`
 
 ## Install Vim Plugins & Themes
 
-* `$ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
-* `$ vim ~/dotfiles/vimrc`
+* `git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+* `vim ~/dotfiles/vimrc`
 * `:source %`
 * `:PluginInstall`
 
@@ -39,7 +40,6 @@ In the included vimrc:
 
 #### Navigation
 
-* [NerdTREE](https://github.com/scrooloose/nerdtree) - A tree explorer plugin for vim (defualt: off).
 * [ctrl-p](https://github.com/kien/ctrlp.vim) - Fuzzy file, buffer, mru, tag, etc finder.
 
 #### Git
