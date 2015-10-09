@@ -1,11 +1,4 @@
-export GOPATH=/Users/maciej.lenc/go
-
-export MYSQL_USERNAME='root'
-export MYSQL_PASSWORD='admin'
-
-export CC=/usr/local/bin/gcc-4.2
-export CXX=/usr/local/bin/g++-4.2
-export MACOSX_DEPLOYMENT_TARGET=10.9 # Resolves issues with nokogiri gem installation
+export GOPATH=/home/mlen/workspace/go/
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.rbenv/shims:$PATH"
@@ -19,16 +12,20 @@ export DEFERRED_GARBAGE_COLLECTION=true
 export EDITOR='vim'
 export no_proxy=127.0.0.1 # Proxy fix for Rspec
 
+if [ -z "$DISPLAY" ] && [ $(tty) = /dev/tty1 ]; then
+  while true
+  do
+  startx --
+  sleep 10
+  done
+fi
+
 eval "$(rbenv init -)"
 
 source ~/dotfiles/git-completion.bash
 
 if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
-fi
-
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
 fi
 
 function github {

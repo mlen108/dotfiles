@@ -1,3 +1,7 @@
+# copy/paste on terminal with xclip
+alias xcopy='xclip -selection c'
+alias xpaste='xclip -selection clipboard -o'
+
 # development tasks
 alias be='bundle exec'
 alias rs='be rspec'
@@ -6,7 +10,7 @@ alias dj="be rake jobs:clear jobs:work"
 
 # Directory Nav
 alias ..="cd .."
-alias ll='ls -alF'
+alias ll='ls -alF --color=auto'
 alias la='ls -A'
 alias l='ls -CF'
 
