@@ -104,6 +104,12 @@ set complete=.,t
 
 set showmatch "show matching brackets
 
+" Ignore vendor folder (for Go dependencies)
+set wildignore+=*/vendor/*
+let g:ctrlp_custom_ignore = {
+  \ 'dir': '/vendor/',
+  \ }
+
 " Map leader to ,
 map , \
 
