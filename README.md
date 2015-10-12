@@ -3,7 +3,7 @@ Dotfiles
 
 Simple dotfiles using bash shell, vim as editor, few awesome vim plugins etc.
 
-Currently in use on OSX 10.10.5 (work env), and Debian 8.2 ("other" work env). See the `X` branch for config related to Xorg.
+Currently in use on OSX 10.10.5 (work env), and Debian 8.2 with X11 ("other" work env). See the `X` branch for config related to Xorg.
 
 Usage
 ========
@@ -23,7 +23,13 @@ Usage
 * `ln -nfs ~/dotfiles/gitconfig .gitconfig`
 
 If proper Unix-like system:
-* `ln -nfs ~/dotfiles/Xdefaults .Xdefaults`
+* `mkdir -p ~/.config/awesome/`
+* `ln -nfs ~/dotfiles/awesome/rc.lua ~/.config/awesome/rc.lua`
+* `ln -nfs ~/dotfiles/X/Xdefaults .Xdefaults`
+* `mkdir -p ~/.bin/`
+* `ln -nfs ~/dotfiles/bin/capscr ~/.bin/capscr`
+
+You will need `imagemagick` for the `capscr` functionality to work.
 
 ## Install Vim Plugins & Themes
 
