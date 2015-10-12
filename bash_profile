@@ -1,11 +1,13 @@
-export GOPATH=/home/mlen/workspace/go/
+export GOROOT=/usr/local/go
+export GOPATH=/home/mlen/go
+export GO15VENDOREXPERIMENT=1
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.rbenv/shims:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
-export PATH="$GOPATH/bin:$PATH"
+export PATH="$GOROOT/bin:$PATH"
 export PATH="$HOME/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/bin/:$PATH"
 
 export DEFERRED_GARBAGE_COLLECTION=true
