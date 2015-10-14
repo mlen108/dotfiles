@@ -20,6 +20,7 @@
   d = diff
   dc = diff --cached
   df = diff --function-context
+  f = fetch
   in = !git fetch && git log ..origin/master
   ls = ls-files
   pl = pull
