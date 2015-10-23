@@ -25,7 +25,6 @@ Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'idanarye/vim-merginal'
 Plugin 'fatih/vim-go'
-Plugin 'shime/vim-livedown'
 Plugin 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line
