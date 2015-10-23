@@ -27,7 +27,7 @@
   ps = push
   s = status
   ss = status -s
-  tl = log --tags --simplify-by-decoration --pretty="format:%ai %d"
+  tl = log --tags --simplify-by-decoration --pretty=format:'%ai %d'
   tlg = log --date-order --graph --tags --simplify-by-decoration --pretty=format:'%ai %h %d'
   who = shortlog -n -s --no-merges
 
