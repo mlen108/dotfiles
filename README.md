@@ -3,7 +3,7 @@ Dotfiles
 
 Simple dotfiles using bash shell, vim as editor, few awesome vim plugins etc.
 
-Currently in use on OSX 10.10.5 (work env), and Debian 8.2 with X11 ("other" work env). See the `X` branch for config related to Xorg.
+Currently in use on Debian 8.2 with X11 ("other" work env), and OSX 10.10.5 (work env). See the `master` branch for config related to OSX.
 
 Usage
 ========
@@ -75,4 +75,5 @@ In the included vimrc:
 * [vim-endwise](https://github.com/tpope/vim-endwise) - Wisely add "end" in ruby, endfunction/endif/more in vim script, etc.
 * [vim-livedown](https://github.com/shime/vim-livedown) - Vim plugin for Livedown. Markdown Preview in browser.
 * [vim-rspec](https://github.com/thoughtbot/vim-rspec) - Run Rspec specs from Vim.
+* [vim-fetch](https://github.com/kopischke/vim-fetch) - Handle line and column numbers in file names.
 
