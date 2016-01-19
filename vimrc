@@ -26,6 +26,7 @@ Plugin 'idanarye/vim-merginal'
 Plugin 'fatih/vim-go'
 Plugin 'shime/vim-livedown'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'kopischke/vim-fetch'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
