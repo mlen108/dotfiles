@@ -32,19 +32,22 @@
   who = shortlog -n -s --no-merges
 
 [pull]
-	default = current
+  default = current
 
 [push]
   default = current
 
 [difftool]
-	prompt = false
+  prompt = false
 
 [merge]
   conflictstyle = diff3
 
 [mergetool]
-	prompt = false
+  prompt = false
 
 [core]
-	excludesfile = /Users/maciej.lenc/.gitignore
+  excludesfile = /Users/maciej.lenc/.gitignore
+
+[grep]
+  lineNumber = true
