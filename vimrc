@@ -48,8 +48,8 @@ let g:airline#extensions#syntastic#enabled = 1
 
 " Indent styles
 let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=dark
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=orange
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=234
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=214
 
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
