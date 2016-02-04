@@ -27,6 +27,7 @@ Plugin 'idanarye/vim-merginal'
 Plugin 'fatih/vim-go'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'kopischke/vim-fetch'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -44,6 +45,11 @@ let g:airline_theme='powerlineish'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#branch#displayed_head_limit = 10
 let g:airline#extensions#syntastic#enabled = 1
+
+" Indent styles
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=dark
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=orange
 
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
