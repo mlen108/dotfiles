@@ -1,5 +1,6 @@
+export GOROOT=/usr/local/go
 export GOPATH=/Users/maciej.lenc/go
-
+source ~/perl5/perlbrew/etc/bashrc
 export MYSQL_USERNAME='root'
 export MYSQL_PASSWORD='admin'
 
@@ -12,8 +13,9 @@ export PATH="$HOME/.rbenv/shims:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
-export PATH="$GOPATH/bin:$PATH"
-export PATH="$HOME/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/bin/:$PATH"
+export PATH="$GOROOT/bin:$PATH"
+export PATH="$HOME/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/bin:$PATH"
+export PATH="/usr/local/Cellar/mysql56/5.6.31/bin:$PATH"
 
 export DEFERRED_GARBAGE_COLLECTION=true
 export EDITOR='vim'
@@ -197,3 +199,16 @@ function prompt_command {
 
 # Initialisation commands
 PROMPT_COMMAND=prompt_command
+
+function docker_start() {
+  docker-machine start default
+  docker-machine env
+  eval "$(docker-machine env default)"
+  eval "$(aws ecr get-login --region eu-west-1)"
+}
+
+export NVM_DIR="/Users/maciej.lenc/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+# Added by install_latest_perl_osx.pl
+[ -r /Users/maciej.lenc/.bashrc ] && source /Users/maciej.lenc/.bashrc
+
