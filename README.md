@@ -73,6 +73,6 @@ In the included vimrc:
 * [tcomment_vim](https://github.com/tomtom/tcomment_vim) - An extensible & universal comment vim-plugin that also handles embedded filetypes.
 * [vim-better-whitespace](https://github.com/ntpeters/vim-better-whitespace) - Better whitespace highlighting for Vim.
 * [vim-endwise](https://github.com/tpope/vim-endwise) - Wisely add "end" in ruby, endfunction/endif/more in vim script, etc.
-* [vim-livedown](https://github.com/shime/vim-livedown) - Vim plugin for Livedown. Markdown Preview in browser.
 * [vim-rspec](https://github.com/thoughtbot/vim-rspec) - Run Rspec specs from Vim.
+* [vim-fetch](https://github.com/kopischke/vim-fetch) - Handle line and column numbers in file names.
 

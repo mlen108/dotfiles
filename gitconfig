@@ -8,7 +8,6 @@
   email = "maciej.lenc@sage.com"
 
 [alias]
-[alias]
   a = add
   aa = !git add . && git status
   ap = add -p
@@ -28,22 +27,27 @@
   ps = push
   s = status
   ss = status -s
+  tl = log --tags --simplify-by-decoration --pretty=format:'%ai %d'
+  tlg = log --date-order --graph --tags --simplify-by-decoration --pretty=format:'%ai %h %d'
   who = shortlog -n -s --no-merges
 
 [pull]
-	default = current
+  default = current
 
 [push]
   default = current
 
 [difftool]
-	prompt = false
+  prompt = false
 
 [merge]
   conflictstyle = diff3
 
 [mergetool]
-	prompt = false
+  prompt = false
 
 [core]
-	excludesfile = /Users/maciej.lenc/.gitignore
+  excludesfile = /Users/maciej.lenc/.gitignore
+
+[grep]
+  lineNumber = true
