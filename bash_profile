@@ -1,6 +1,5 @@
 export GOROOT=/usr/local/go
 export GOPATH=/Users/maciej.lenc/go
-source ~/perl5/perlbrew/etc/bashrc
 export MYSQL_USERNAME='root'
 export MYSQL_PASSWORD='admin'
 
@@ -32,24 +31,6 @@ fi
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
-
-function github {
-  branch="$(git rev-parse --abbrev-ref HEAD)"
-    url="$(git config --get remote.origin.url)"
-    url=${url/git@github.com:/http://github.com/}
-  url=${url/.git/}
-
-  if [[ $1 =~ "compare" ]]; then action="compare"
-    elif [[ $1 =~ "pr" ]]; then action="pull"
-  else action="tree"; fi
-
-    if [[ $2 != "" ]]; then base="$2..."
-    else base=""; fi
-
-      url="${url}/${action}/${base}${branch}"
-
-        echo "Opening ${url} $(\open ${url})"
-}
 
 #------------------------------------------------------
 # CUSTOM COMMAND PROMPT
@@ -117,7 +98,7 @@ function repo_root {
 function get_branch_status {
   if [[ $(git status | tail -n1) == "nothing to commit (working directory clean)" ]]; then
     echo -e "$GIT_CLEAN"
-  elif [[ $(git status | tail -n1) == "nothing to commit, working directory clean" ]]; then
+  elif [[ $(git status | tail -n1) == "nothing to commit, working tree clean" ]]; then
     echo -e "$GIT_CLEAN"
   else
     echo -e "$GIT_DIRTY"
@@ -162,15 +143,6 @@ function set_prompt {
   PS1="$GIT_LABEL ${repo_name} $GIT_BRANCH ${current_branch} ${branch_status} $NO_COLOUR $GIT_PATH\w$NO_COLOR $PS1_MARKER"
 }
 
-# Custom window dims & pos for Sublime and Console duo
-# requires wmctrl cli window manager
-function edit_mode {
-  file=$*
-  title "Initialising Edit Mode"; echo "Please wait while edit mode initialises..."; wmctrl -r :ACTIVE: -b add,maximized_horz; wmctrl -r :ACTIVE: -e 0,0,874,-1,150; title "Slime Console"; slime $file & disown; sleep 0.8; wmctrl -r Sublime -b remove,maximized_vert; wmctrl -r Sublime -b add,maximized_horz; wmctrl -r Sublime -e 0,0,0,-1,824
-}
-alias em='edit_mode'
-alias floatme='wmctrl -r :ACTIVE: -b remove,maximized_horz;wmctrl -r :ACTIVE: -b remove,maximized_vert; wmctrl -r :ACTIVE: -e 0,150,150,600,400'
-
 # Output chmod reference diagram and usage
 function chmod_ref {
   echo "
@@ -200,15 +172,9 @@ function prompt_command {
 # Initialisation commands
 PROMPT_COMMAND=prompt_command
 
-function docker_start() {
-  docker-machine start default
-  docker-machine env
-  eval "$(docker-machine env default)"
-  eval "$(aws ecr get-login --region eu-west-1)"
-}
-
 export NVM_DIR="/Users/maciej.lenc/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 # Added by install_latest_perl_osx.pl
 [ -r /Users/maciej.lenc/.bashrc ] && source /Users/maciej.lenc/.bashrc
 
+export PATH="/usr/local/opt/qt/bin:$PATH"
