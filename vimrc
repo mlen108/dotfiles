@@ -10,29 +10,20 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'fatih/vim-go'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'itchyny/vim-gitbranch'
 Plugin 'nanotech/jellybeans.vim'
 
 call vundle#end()
 filetype plugin indent on
 
 syntax on
-
-function! GitBranch()
-  return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
-endfunction
-
-function! StatuslineGit()
-  let l:branchname = GitBranch()
-  return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
-endfunction
-
 colorscheme jellybeans
 
 set laststatus=2
 set noshowmode
 set statusline=
 set statusline+=%1*
-set statusline+=%{StatuslineGit()}
+set statusline+=\[%{gitbranch#name()}\]
 set statusline+=\ %F
 set statusline+=\ [%l:%c/%L\]
 set statusline+=\ [%{mode()}\]
@@ -100,9 +91,6 @@ let g:ctrlp_custom_ignore = {
 
 " Map leader to ,
 map , \
-
-" Indent the entire file
-nnoremap <leader>= mpggVG='pzz
 
 " Clear search buffer with return
 noremap <CR> :nohlsearch<cr>
